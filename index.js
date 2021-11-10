@@ -87,7 +87,7 @@ class Seasons {
    * [Exercise 5A] Seasons creates a seasons object
    */
   constructor() {
-    // ✨ initialize whatever properties are needed
+    this.currentSeason = ''
   }
 
   /**
@@ -103,7 +103,17 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    // ✨ implement
+    if (this.currentSeason === '') {
+      this.currentSeason = 'summer'
+    } else if (this.currentSeason === 'summer') {
+      this.currentSeason = 'fall'
+    } else if (this.currentSeason === 'fall') {
+      this.currentSeason = 'winter'
+    } else if (this.currentSeason === 'winter') {
+      this.currentSeason = 'spring'
+    } else if (this.currentSeason === 'spring') {
+      this.currentSeason = 'summer'
+    } 
   }
 }
 
